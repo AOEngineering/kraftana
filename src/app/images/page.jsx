@@ -38,7 +38,7 @@ export default function ImagesPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-foreground/70">
             These files are coming from `public/Images`. Direct file URLs also work, for example
-            `/Images/striped-midi-skirt.jpeg`.
+            `/images/striped-midi-skirt.jpeg`.
           </p>
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function ImagesPage() {
             <article key={file} className="paper-panel overflow-hidden rounded-[1.8rem] p-3">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.2rem]">
                 <WatermarkedImage
-                  src={`/Images/${file}`}
+                  src={`/images/${file}`}
                   alt={formatLabel(file)}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"

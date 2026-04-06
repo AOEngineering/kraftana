@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils"
 
 const items = [
   {
-    src: "/Images/sunset-chevron-halter-top.jpeg",
+    src: "/images/sunset-chevron-halter-top.jpeg",
     title: "Sunset chevron halter",
     tag: "Made to order",
     description: "A warm chevron halter with citrus, cream, and rust tones that feels playful without losing polish.",
@@ -13,7 +13,7 @@ const items = [
     watermarkMode: "corner",
   },
   {
-    src: "/Images/blush-sage-granny-square-top.jpeg",
+    src: "/images/blush-sage-granny-square-top.jpeg",
     title: "Blush and sage square top",
     tag: "Best seller",
     description: "A soft white base with blush and sage squares, styled like a delicate summer layer on the worktable.",
@@ -22,7 +22,7 @@ const items = [
     watermarkMode: "corner",
   },
   {
-    src: "/Images/striped-crochet-beanie.jpeg",
+    src: "/images/striped-crochet-beanie.jpeg",
     title: "Blue stripe beanie",
     tag: "Gift ready",
     description: "Chunky stitched stripes in blue, oat, and cream that make a simple cold-weather piece feel tactile and clean.",
@@ -31,7 +31,7 @@ const items = [
     watermarkMode: "pattern",
   },
   {
-    src: "/Images/blue-granny-square-cardigan.jpeg",
+    src: "/images/blue-granny-square-cardigan.jpeg",
     title: "Blue granny square cardigan",
     tag: "Studio favorite",
     description: "A cooler palette and classic square construction with enough contrast to show off the stitchwork beautifully.",
@@ -40,7 +40,7 @@ const items = [
     watermarkMode: "corner",
   },
   {
-    src: "/Images/striped-midi-skirt.jpeg",
+    src: "/images/striped-midi-skirt.jpeg",
     title: "Striped midi skirt",
     tag: "Soft texture",
     description: "Wide blue, cream, olive, and berry bands give this skirt a clean shape with a softer handmade finish.",
@@ -49,7 +49,7 @@ const items = [
     watermarkMode: "corner",
   },
   {
-    src: "/Images/patchwork-drawstring-skirt.jpeg",
+    src: "/images/patchwork-drawstring-skirt.jpeg",
     title: "Patchwork drawstring skirt",
     tag: "Fresh palette",
     description: "A lively patchwork of coral, aqua, and cream squares tied together with a softer drawstring waist.",

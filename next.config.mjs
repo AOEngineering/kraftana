@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 
 import withMDX from '@next/mdx'
+import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
 // ESM-compatible __dirname
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-
-const isProd = process.env.NODE_ENV === 'production'
 
 const mdxEnhancer = withMDX({
   extension: /\.mdx?$/,
@@ -19,11 +18,10 @@ const mdxEnhancer = withMDX({
 })
 
 const nextConfig = {
-  distDir: 'dist',
-
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -50,5 +48,7 @@ const nextConfig = {
     return config
   },
 }
+
+initOpenNextCloudflareForDev()
 
 export default mdxEnhancer(nextConfig)

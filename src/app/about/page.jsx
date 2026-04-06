@@ -33,7 +33,7 @@ export default function AboutPage() {
         <article className="paper-panel overflow-hidden rounded-[2rem] p-3">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[1.45rem]">
             <WatermarkedImage
-              src="/Images/autumn-granny-square-cardigan.jpeg"
+              src="/images/autumn-granny-square-cardigan.jpeg"
               alt="Autumn granny square cardigan styled in the Kraftana studio"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"

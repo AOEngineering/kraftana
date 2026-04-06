@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 const photoStack = [
   {
-    src: "/Images/autumn-granny-square-cardigan.jpeg",
+    src: "/images/autumn-granny-square-cardigan.jpeg",
     alt: "Autumn granny square cardigan laid out in warm studio light",
     shell: "right-[4%] top-2 w-[58%] sm:right-[7%] sm:w-[54%]",
     frame: "aspect-[4/5]",
@@ -14,7 +14,7 @@ const photoStack = [
     watermarkMode: "corner",
   },
   {
-    src: "/Images/cobalt-fringe-scarf.jpeg",
+    src: "/images/cobalt-fringe-scarf.jpeg",
     alt: "Cobalt blue fringe scarf arranged like a printed studio photograph",
     shell: "left-[3%] top-[18%] w-[40%] sm:left-[6%] sm:w-[36%]",
     frame: "aspect-[4/5]",
@@ -22,7 +22,7 @@ const photoStack = [
     watermarkMode: "corner",
   },
   {
-    src: "/Images/striped-midi-skirt.jpeg",
+    src: "/images/striped-midi-skirt.jpeg",
     alt: "Striped midi skirt with soft blue, cream, and berry bands",
     shell: "left-[18%] bottom-[3%] w-[48%] sm:left-[21%] sm:w-[44%]",
     frame: "aspect-[1/1]",

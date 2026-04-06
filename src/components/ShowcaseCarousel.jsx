@@ -9,25 +9,25 @@ import { Button } from "@/components/ui/button"
 
 const slides = [
   {
-    src: "/Images/blush-sage-granny-square-top.jpeg",
+    src: "/images/blush-sage-granny-square-top.jpeg",
     title: "Blush and sage square top",
     blurb: "A delicate square-motif top in white, blush, and sage that reads soft and airy instead of heavy.",
     note: "Soft layering",
   },
   {
-    src: "/Images/striped-midi-skirt.jpeg",
+    src: "/images/striped-midi-skirt.jpeg",
     title: "Striped midi skirt",
     blurb: "Crisp horizontal bands and a longer silhouette give this handmade skirt a more tailored, boutique feel.",
     note: "Quiet statement",
   },
   {
-    src: "/Images/cobalt-fringe-scarf.jpeg",
+    src: "/images/cobalt-fringe-scarf.jpeg",
     title: "Cobalt fringe scarf",
     blurb: "Bright blue fringe and open stitching turn a classic scarf into something more graphic and memorable.",
     note: "Studio favorite",
   },
   {
-    src: "/Images/blue-granny-square-cardigan.jpeg",
+    src: "/images/blue-granny-square-cardigan.jpeg",
     title: "Blue granny square cardigan",
     blurb: "A cool-toned cardigan with crisp edging and visible stitch structure that photographs beautifully.",
     note: "Texture first",

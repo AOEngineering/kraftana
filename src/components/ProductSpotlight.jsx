@@ -1,10 +1,10 @@
 import WatermarkedImage from "@/components/WatermarkedImage"
 
 const items = [
-  { src: "/Images/sunset-chevron-halter-top.jpeg", title: "Sunset chevron halter", tag: "Made to order" },
-  { src: "/Images/blush-sage-granny-square-top.jpeg", title: "Blush and sage square top", tag: "Best seller" },
-  { src: "/Images/striped-midi-skirt.jpeg", title: "Striped midi skirt", tag: "Customer fave" },
-  { src: "/Images/striped-crochet-beanie.jpeg", title: "Blue stripe beanie", tag: "Gift ready" },
+  { src: "/images/sunset-chevron-halter-top.jpeg", title: "Sunset chevron halter", tag: "Made to order" },
+  { src: "/images/blush-sage-granny-square-top.jpeg", title: "Blush and sage square top", tag: "Best seller" },
+  { src: "/images/striped-midi-skirt.jpeg", title: "Striped midi skirt", tag: "Customer fave" },
+  { src: "/images/striped-crochet-beanie.jpeg", title: "Blue stripe beanie", tag: "Gift ready" },
 ]
 
 export default function ProductSpotlight() {

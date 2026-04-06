@@ -283,7 +283,7 @@ export default function CustomOrderForm() {
       resetAll()
     } catch (error) {
       console.error(error)
-      toast.error("Could not submit. Please try again.")
+      toast.error(error instanceof Error ? error.message : "Could not submit. Please try again.")
     }
   }
 
@@ -603,7 +603,8 @@ export default function CustomOrderForm() {
                 Inspiration
               </CardTitle>
               <CardDescription className="text-sm leading-7 text-foreground/66">
-                Add a reference if you have one. A screenshot or quick phone photo is enough.
+                Add a reference for your own preview, or paste a link in the notes field. File uploads
+                are not sent with the request yet.
               </CardDescription>
             </CardHeader>
 

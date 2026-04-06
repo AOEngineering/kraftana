@@ -4,9 +4,9 @@ import WatermarkedImage from "@/components/WatermarkedImage"
 import { Button } from "@/components/ui/button"
 
 const thumbs = [
-  { src: "/Images/patchwork-drawstring-skirt.jpeg", alt: "Patchwork drawstring crochet skirt in coral and aqua" },
-  { src: "/Images/pastel-granny-square-skirt.jpeg", alt: "Pastel granny square crochet skirt" },
-  { src: "/Images/ombre-crochet-skirt.jpeg", alt: "Ombre crochet skirt fading from cream to blush" },
+  { src: "/images/patchwork-drawstring-skirt.jpeg", alt: "Patchwork drawstring crochet skirt in coral and aqua" },
+  { src: "/images/pastel-granny-square-skirt.jpeg", alt: "Pastel granny square crochet skirt" },
+  { src: "/images/ombre-crochet-skirt.jpeg", alt: "Ombre crochet skirt fading from cream to blush" },
 ]
 
 export default function SimpleCTA() {

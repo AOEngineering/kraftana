@@ -8,8 +8,12 @@ dist/
 .env.production.local
 
 .next/
+.open-next/
 .turbo/
 .vercel/
+.wrangler/
+.dev.vars
+cloudflare-env.d.ts
 
 coverage/
 *.log

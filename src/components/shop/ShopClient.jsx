@@ -20,7 +20,7 @@ const PRODUCTS = [
     price: 160,
     category: "tops",
     leadDays: 10,
-    images: ["/Images/blush-sage-granny-square-top.jpeg", "/Images/blue-granny-square-cardigan.jpeg"],
+    images: ["/images/blush-sage-granny-square-top.jpeg", "/images/blue-granny-square-cardigan.jpeg"],
     blurb: "A white, blush, and sage square-motif top with a soft studio-table finish.",
   },
   {
@@ -29,7 +29,7 @@ const PRODUCTS = [
     price: 75,
     category: "tops",
     leadDays: 7,
-    images: ["/Images/sunset-chevron-halter-top.jpeg", "/Images/cobalt-fringe-scarf.jpeg"],
+    images: ["/images/sunset-chevron-halter-top.jpeg", "/images/cobalt-fringe-scarf.jpeg"],
     blurb: "A warm citrus-and-rust halter with a playful chevron layout and custom color potential.",
   },
   {
@@ -38,7 +38,7 @@ const PRODUCTS = [
     price: 58,
     category: "skirts",
     leadDays: 6,
-    images: ["/Images/striped-midi-skirt.jpeg", "/Images/patchwork-drawstring-skirt.jpeg"],
+    images: ["/images/striped-midi-skirt.jpeg", "/images/patchwork-drawstring-skirt.jpeg"],
     blurb: "A longer striped skirt in blue, cream, olive, and berry with a clean boutique silhouette.",
   },
   {
@@ -47,7 +47,7 @@ const PRODUCTS = [
     price: 90,
     category: "accessories",
     leadDays: 8,
-    images: ["/Images/striped-crochet-beanie.jpeg", "/Images/pastel-granny-square-skirt.jpeg"],
+    images: ["/images/striped-crochet-beanie.jpeg", "/images/pastel-granny-square-skirt.jpeg"],
     blurb: "A chunky striped beanie in blue, oat, and cream with a soft hand and giftable feel.",
   },
   {
@@ -56,7 +56,7 @@ const PRODUCTS = [
     price: 175,
     category: "accessories",
     leadDays: 12,
-    images: ["/Images/cobalt-fringe-scarf.jpeg", "/Images/blush-sage-granny-square-top.jpeg"],
+    images: ["/images/cobalt-fringe-scarf.jpeg", "/images/blush-sage-granny-square-top.jpeg"],
     blurb: "An open-stitch scarf with bright cobalt edging and long fringe for a more graphic finish.",
   },
   {
@@ -65,7 +65,7 @@ const PRODUCTS = [
     price: 62,
     category: "layers",
     leadDays: 6,
-    images: ["/Images/blue-granny-square-cardigan.jpeg", "/Images/striped-midi-skirt.jpeg"],
+    images: ["/images/blue-granny-square-cardigan.jpeg", "/images/striped-midi-skirt.jpeg"],
     blurb: "A cool-toned cardigan with crisp edging, visible stitchwork, and a cozy handmade drape.",
   },
 ]
