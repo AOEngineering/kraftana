@@ -50,6 +50,9 @@ Next.js 15 application template for the Kraftana storefront project.
 This app is configured for OpenNext on Cloudflare Workers.
 
 - `src/app/api/custom/route.js` forwards custom order submissions to `CUSTOM_ORDER_WEBHOOK_URL`.
+- `functions/api/custom.js` is a Cloudflare Pages Functions fallback for the same `/api/custom` path.
+- `src/lib/customOrderHandler.js` contains the shared validation and webhook delivery logic used by both runtimes.
 - The webhook can be any HTTPS endpoint that accepts JSON, such as a lightweight email bridge or automation workflow.
 - Local SQLite storage is intentionally not used because it is not compatible with the Cloudflare Workers runtime.
 - Set `CUSTOM_ORDER_WEBHOOK_URL` before deploying, and optionally `CUSTOM_ORDER_WEBHOOK_AUTH_HEADER` if the upstream endpoint expects a bearer token or other Authorization header value.
+- Inspiration uploads are preview-only in the browser. The form sends the file name and MIME type, not the image bytes, so the request stays small for Cloudflare Functions.
