@@ -3,51 +3,52 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react"
 
 import WatermarkedImage from "@/components/WatermarkedImage"
 import { Button } from "@/components/ui/button"
-
-const proof = [
-  "Custom sizing and color planning",
-  "Clear quote before stitching starts",
-  "Small-batch finishing and gift-ready packaging",
-]
-
-const featured = [
-  {
-    src: "/images/autumn-granny-square-cardigan.jpeg",
-    title: "Autumn cardigan",
-    note: "Warm granny-square structure with a polished studio finish.",
-    className: "lg:col-span-7",
-    image: "aspect-[4/3]",
-  },
-  {
-    src: "/images/sunset-chevron-halter-top.jpeg",
-    title: "Chevron halter",
-    note: "A brighter made-to-order piece with cleaner shape and rhythm.",
-    className: "lg:col-span-5",
-    image: "aspect-[4/5]",
-  },
-  {
-    src: "/images/cobalt-fringe-scarf.jpeg",
-    title: "Cobalt scarf",
-    note: "Graphic color, soft drape, and handmade texture.",
-    className: "lg:col-span-4",
-    image: "aspect-[1/1]",
-  },
-  {
-    src: "/images/striped-midi-skirt.jpeg",
-    title: "Striped midi skirt",
-    note: "A quieter palette with confident linework.",
-    className: "lg:col-span-8",
-    image: "aspect-[16/10]",
-  },
-]
+import { PRODUCTS } from "@/lib/products"
 
 const steps = [
   ["01", "Send the idea", "Share the piece, size, color direction, budget, and timing."],
-  ["02", "Confirm the plan", "You get a clear quote and any detail questions before work starts."],
-  ["03", "Receive the piece", "The finished order ships with simple care notes and a softer presentation."],
+  ["02", "Review the details", "Kevonne follows up if anything needs clarifying before the quote is finalized."],
+  ["03", "Approve the quote", "You receive a timeline and plan before the piece moves into the studio queue."],
 ]
 
-export default function MinimalLanding() {
+const proof = [
+  "Custom sizing and color planning",
+  "Quote and timeline before work begins",
+  "Handmade in small batches from Cleveland",
+]
+
+const defaultFeaturedSlugs = [
+  "blue-granny-square-cardigan",
+  "sunset-chevron-halter",
+  "cobalt-fringe-scarf",
+  "striped-midi-skirt",
+]
+
+const cardLayouts = [
+  { className: "lg:col-span-7", image: "aspect-[4/3]" },
+  { className: "lg:col-span-5", image: "aspect-[4/5]" },
+  { className: "lg:col-span-4", image: "aspect-[1/1]" },
+  { className: "lg:col-span-8", image: "aspect-[16/10]" },
+]
+
+export default function MinimalLanding({
+  featuredProducts = PRODUCTS.filter((product) =>
+    defaultFeaturedSlugs.includes(product.slug)
+  ),
+  siteSettings = {},
+  testimonials = [],
+}) {
+  const featured = featuredProducts.slice(0, 4).map((product, index) => ({
+    src: product.images?.[0]?.src || "/images/blush-sage-granny-square-top.jpeg",
+    title: product.title,
+    note: product.shortDescription,
+    className: cardLayouts[index]?.className || "lg:col-span-6",
+    image: cardLayouts[index]?.image || "aspect-[4/5]",
+    alt: product.images?.[0]?.alt || product.alt || product.title,
+  }))
+
+  const socialProof = testimonials.slice(0, 2)
+
   return (
     <div className="overflow-x-clip">
       <section className="relative border-b border-[color:var(--line-soft)]">
@@ -57,11 +58,12 @@ export default function MinimalLanding() {
           <div className="max-w-2xl">
             <p className="eyebrow">Handmade crochet, edited down</p>
             <h1 className="mt-5 max-w-[10ch] font-display text-[3.8rem] leading-[0.86] tracking-[-0.03em] text-[color:var(--foreground)] sm:text-[5.6rem] lg:text-[6.6rem]">
-              Soft pieces with a sharper point of view.
+              Handmade crochet with warmth, shape, and personality.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-foreground/74 sm:text-lg">
-              Kraftana is a small crochet studio for custom wearables, gifts, and home pieces that
-              feel personal without feeling overworked.
+              Kraftana Studio is Kevonne Workman&apos;s Cleveland crochet studio for handmade wearables,
+              custom pieces, and thoughtful gifts made with softness, intention, and a personal
+              touch.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -69,7 +71,7 @@ export default function MinimalLanding() {
                 <Link href="/custom">Start a custom request</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/shop">View the shop</Link>
+                <Link href="/shop">Browse the collection</Link>
               </Button>
             </div>
 
@@ -87,26 +89,22 @@ export default function MinimalLanding() {
             <div className="relative h-full min-h-[32rem] overflow-hidden rounded-[1.9rem]">
               <WatermarkedImage
                 src="/images/blush-sage-granny-square-top.jpeg"
-                alt="Blush and sage crochet top photographed as a Kraftana studio piece"
+                alt="Blush and sage crochet top photographed as a Kraftana Studio piece"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 48vw"
-                watermarkText="Kraftana"
-                watermarkMode="corner"
-                watermarkOpacity={0.36}
-                watermarkPosition="bottom-right"
-                preventDrag
-                preventContextMenu
+                showWatermark={false}
                 imageClassName="object-cover"
               />
             </div>
 
             <div className="absolute bottom-7 left-7 right-7 rounded-[1.5rem] border border-white/35 bg-[rgba(255,250,246,0.78)] p-4 shadow-[0_22px_60px_rgba(87,56,47,0.18)] backdrop-blur-md dark:bg-[rgba(41,33,31,0.72)]">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[color:var(--primary)]">
-                Studio focus
+                Studio promise
               </p>
               <p className="mt-2 text-sm leading-7 text-foreground/76">
-                Fewer sections, stronger photography, and one clear path into custom orders.
+                {siteSettings.customOrderAvailabilityText ||
+                  "Clear communication, custom-friendly fit, and handmade pieces that still feel polished."}
               </p>
             </div>
           </div>
@@ -118,12 +116,12 @@ export default function MinimalLanding() {
           <div>
             <p className="eyebrow">Recent work</p>
             <h2 className="mt-4 max-w-[11ch] font-display text-4xl leading-[0.92] text-[color:var(--foreground)] sm:text-6xl">
-              A tighter edit of texture and color.
+              A closer look at the studio style.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-foreground/72">
-            The page now reads less like a template storefront and more like a focused studio
-            portfolio: fewer moving parts, clearer hierarchy, and faster decisions.
+            Every piece starts with texture, color, and the feeling it should bring when someone
+            wears it, gifts it, or brings it home.
           </p>
         </div>
 
@@ -136,15 +134,10 @@ export default function MinimalLanding() {
               <div className={`relative overflow-hidden rounded-[1.45rem] ${item.image}`}>
                 <WatermarkedImage
                   src={item.src}
-                  alt={item.title}
+                  alt={item.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  watermarkText="Kraftana"
-                  watermarkMode={index % 2 === 0 ? "corner" : "pattern"}
-                  watermarkOpacity={index % 2 === 0 ? 0.36 : 0.18}
-                  watermarkPosition="bottom-right"
-                  preventDrag
-                  preventContextMenu
+                  showWatermark={false}
                   imageClassName="object-cover transition duration-500 group-hover:scale-[1.03]"
                 />
               </div>
@@ -169,7 +162,7 @@ export default function MinimalLanding() {
           <div>
             <p className="eyebrow">Custom flow</p>
             <h2 className="mt-4 max-w-[10ch] font-display text-4xl leading-[0.92] text-[color:var(--foreground)] sm:text-6xl">
-              Simple enough to start. Specific enough to quote.
+              Easy to start. Clear before anything is made.
             </h2>
           </div>
 
@@ -192,19 +185,68 @@ export default function MinimalLanding() {
       </section>
 
       <section className="section-shell py-14 sm:py-20">
+        <div className="grid gap-5 lg:grid-cols-3">
+          <article className="paper-panel rounded-[2rem] p-6">
+            <p className="eyebrow">Care</p>
+            <p className="mt-4 text-base leading-8 text-foreground/72">
+              Handmade crochet deserves gentle care. Each piece comes with simple care guidance so
+              it stays soft, wearable, and loved.
+            </p>
+          </article>
+          <article className="paper-panel rounded-[2rem] p-6">
+            <p className="eyebrow">Sizing</p>
+            <p className="mt-4 text-base leading-8 text-foreground/72">
+              Kraftana Studio was built with custom fit in mind. Size notes and adjustments matter here,
+              especially for wearable pieces.
+            </p>
+          </article>
+          <article className="paper-panel rounded-[2rem] p-6">
+            <p className="eyebrow">Feedback</p>
+            <p className="mt-4 text-base leading-8 text-foreground/72">
+              Kevonne is actively gathering feedback, ideas, and custom requests from early visitors.
+            </p>
+            <Button asChild variant="outline" className="mt-5">
+              <Link href="/contact">Share a note</Link>
+            </Button>
+          </article>
+        </div>
+      </section>
+
+      {socialProof.length ? (
+        <section className="section-shell pb-14 sm:pb-20">
+          <div className="grid gap-5 lg:grid-cols-2">
+            {socialProof.map((item) => (
+              <article key={`${item.name}-${item.quote}`} className="paper-panel rounded-[2rem] p-6">
+                <p className="text-base leading-8 text-foreground/72">&ldquo;{item.quote}&rdquo;</p>
+                <p className="mt-4 text-sm font-medium text-[color:var(--foreground)]">
+                  {item.name}
+                  {item.location ? `, ${item.location}` : ""}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      <section className="section-shell pb-14 sm:pb-20">
         <div className="paper-panel grid gap-8 overflow-hidden rounded-[2.3rem] p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="eyebrow">Ready when the idea is</p>
             <h2 className="mt-4 max-w-[13ch] font-display text-4xl leading-[0.92] text-[color:var(--foreground)] sm:text-6xl">
-              Build the next piece around your palette, size, and timeline.
+              Build the next piece around your palette, fit, and timeline.
             </h2>
           </div>
-          <Button asChild size="lg" className="w-full sm:w-auto">
-            <Link href="/custom">
-              Open the request form
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </Button>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button asChild size="lg" className="w-full sm:w-auto">
+              <Link href="/custom">
+                Open the request form
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+              <Link href="/gallery">See the gallery</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>

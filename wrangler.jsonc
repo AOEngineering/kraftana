@@ -16,5 +16,18 @@
       "binding": "WORKER_SELF_REFERENCE",
       "service": "kraftana"
     }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kraftana",
+      "database_id": "97acbae2-3486-41af-85de-a557d9836b65"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA_BUCKET",
+      "bucket_name": "kraftana-media"
+    }
   ]
 }

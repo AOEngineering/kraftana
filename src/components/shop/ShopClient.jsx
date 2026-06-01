@@ -5,78 +5,25 @@ import { useEffect, useMemo, useState } from "react"
 import { Search, SlidersHorizontal } from "lucide-react"
 
 import WatermarkedImage from "@/components/WatermarkedImage"
+import { PRODUCT_CATEGORIES, PRODUCTS, formatPrice } from "@/lib/products"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-
-const PRODUCTS = [
-  {
-    id: "p1",
-    title: "Blush & Sage Square Top",
-    price: 160,
-    category: "tops",
-    leadDays: 10,
-    images: ["/images/blush-sage-granny-square-top.jpeg", "/images/blue-granny-square-cardigan.jpeg"],
-    blurb: "A white, blush, and sage square-motif top with a soft studio-table finish.",
-  },
-  {
-    id: "p2",
-    title: "Sunset Chevron Halter",
-    price: 75,
-    category: "tops",
-    leadDays: 7,
-    images: ["/images/sunset-chevron-halter-top.jpeg", "/images/cobalt-fringe-scarf.jpeg"],
-    blurb: "A warm citrus-and-rust halter with a playful chevron layout and custom color potential.",
-  },
-  {
-    id: "p3",
-    title: "Striped Midi Skirt",
-    price: 58,
-    category: "skirts",
-    leadDays: 6,
-    images: ["/images/striped-midi-skirt.jpeg", "/images/patchwork-drawstring-skirt.jpeg"],
-    blurb: "A longer striped skirt in blue, cream, olive, and berry with a clean boutique silhouette.",
-  },
-  {
-    id: "p4",
-    title: "Blue Stripe Beanie",
-    price: 90,
-    category: "accessories",
-    leadDays: 8,
-    images: ["/images/striped-crochet-beanie.jpeg", "/images/pastel-granny-square-skirt.jpeg"],
-    blurb: "A chunky striped beanie in blue, oat, and cream with a soft hand and giftable feel.",
-  },
-  {
-    id: "p5",
-    title: "Cobalt Fringe Scarf",
-    price: 175,
-    category: "accessories",
-    leadDays: 12,
-    images: ["/images/cobalt-fringe-scarf.jpeg", "/images/blush-sage-granny-square-top.jpeg"],
-    blurb: "An open-stitch scarf with bright cobalt edging and long fringe for a more graphic finish.",
-  },
-  {
-    id: "p6",
-    title: "Blue Granny Square Cardigan",
-    price: 62,
-    category: "layers",
-    leadDays: 6,
-    images: ["/images/blue-granny-square-cardigan.jpeg", "/images/striped-midi-skirt.jpeg"],
-    blurb: "A cool-toned cardigan with crisp edging, visible stitchwork, and a cozy handmade drape.",
-  },
-]
-
-const CATEGORIES = [
-  { value: "all", label: "All pieces" },
-  { value: "tops", label: "Tops" },
-  { value: "skirts", label: "Skirts" },
-  { value: "layers", label: "Layers" },
-  { value: "accessories", label: "Accessories" },
-]
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 const SORTS = [
   { value: "featured", label: "Featured" },
@@ -86,14 +33,10 @@ const SORTS = [
   { value: "lead_desc", label: "Lead Time: Longest" },
 ]
 
-function formatPrice(value) {
-  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value)
-}
-
 function CategoryPills({ active, onChange }) {
   return (
     <div className="relative -mx-1 flex gap-2 overflow-x-auto pb-2">
-      {CATEGORIES.map((category) => {
+      {PRODUCT_CATEGORIES.map((category) => {
         const selected = active === category.value
 
         return (
@@ -114,46 +57,57 @@ function CategoryPills({ active, onChange }) {
   )
 }
 
-function ProductCard({ product, onQuickView }) {
-  const cover = product.images?.[0]
+function ProductCard({ product }) {
+  const cover = product.images?.[0] || {
+    src: "/images/blush-sage-granny-square-top.jpeg",
+    alt: product.alt || product.title,
+  }
 
   return (
     <Card className="group overflow-hidden rounded-[2rem] border-0 bg-transparent p-0 shadow-none">
-      <div className="paper-panel overflow-hidden rounded-[2rem] p-3 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+      <div className="paper-panel flex h-full flex-col overflow-hidden rounded-[2rem] p-3 transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
         <div className="relative aspect-[4/5] overflow-hidden rounded-[1.45rem]">
           <WatermarkedImage
-            src={cover}
-            alt={product.title}
+            src={cover?.src}
+            alt={cover?.alt || product.alt}
             fill
             sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-            watermarkMode="corner"
-            watermarkOpacity={0.28}
-            watermarkPosition="bottom-right"
+            showWatermark={false}
             imageClassName="object-cover"
           />
         </div>
 
-        <CardContent className="p-5">
+        <CardContent className="flex flex-1 flex-col p-5">
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[color:var(--primary)]">
-                {product.category}
+                {product.categoryLabel}
               </p>
-              <h3 className="mt-2 text-xl font-semibold text-[color:var(--foreground)]">{product.title}</h3>
+              <h3 className="mt-2 text-xl font-semibold text-[color:var(--foreground)]">
+                {product.title}
+              </h3>
             </div>
             <span className="rounded-full bg-[color:var(--surface-3)] px-3 py-1 text-sm font-semibold text-[color:var(--foreground)]">
               {formatPrice(product.price)}
             </span>
           </div>
 
-          <p className="mt-3 text-sm leading-7 text-foreground/66">{product.blurb}</p>
-          <div className="mt-4 text-sm text-foreground/55">Lead time: {product.leadDays} days</div>
+          <p className="mt-3 text-sm leading-7 text-foreground/68">
+            {product.shortDescription}
+          </p>
+
+          <div className="mt-5 grid gap-2 text-sm text-foreground/58 sm:grid-cols-2">
+            <div>Lead time: {product.leadDays} days</div>
+            <div>Availability: {product.availability}</div>
+          </div>
         </CardContent>
 
-        <CardFooter className="flex gap-2 p-5 pt-0">
-          <Button onClick={() => onQuickView(product)}>Quick view</Button>
-          <Button variant="outline" disabled>
-            Add to cart
+        <CardFooter className="flex flex-col gap-2 p-5 pt-0 sm:flex-row">
+          <Button asChild className="w-full sm:flex-1">
+            <Link href={`/shop/${product.slug}`}>View details</Link>
+          </Button>
+          <Button asChild variant="outline" className="w-full sm:flex-1">
+            <Link href={`/custom?piece=${product.slug}`}>Request this piece</Link>
           </Button>
         </CardFooter>
       </div>
@@ -161,12 +115,10 @@ function ProductCard({ product, onQuickView }) {
   )
 }
 
-export default function ShopClient() {
+export default function ShopClient({ products = PRODUCTS }) {
   const [query, setQuery] = useState("")
   const [category, setCategory] = useState("all")
   const [sort, setSort] = useState("featured")
-  const [open, setOpen] = useState(false)
-  const [active, setActive] = useState(null)
   const [filtersOpen, setFiltersOpen] = useState(false)
   const [temp, setTemp] = useState("")
 
@@ -176,7 +128,7 @@ export default function ShopClient() {
   }, [temp])
 
   const filtered = useMemo(() => {
-    let list = PRODUCTS.slice()
+    let list = products.slice()
 
     if (category !== "all") list = list.filter((product) => product.category === category)
     if (query.trim()) {
@@ -184,8 +136,8 @@ export default function ShopClient() {
       list = list.filter(
         (product) =>
           product.title.toLowerCase().includes(normalizedQuery) ||
-          product.blurb.toLowerCase().includes(normalizedQuery) ||
-          product.category.toLowerCase().includes(normalizedQuery)
+          product.shortDescription.toLowerCase().includes(normalizedQuery) ||
+          product.categoryLabel.toLowerCase().includes(normalizedQuery)
       )
     }
 
@@ -203,16 +155,11 @@ export default function ShopClient() {
         list.sort((a, b) => b.leadDays - a.leadDays)
         break
       default:
-        list.sort((a, b) => (a.category > b.category ? 1 : -1) || a.price - b.price)
+        list.sort((a, b) => a.price - b.price)
     }
 
     return list
-  }, [category, query, sort])
-
-  function openQuickView(product) {
-    setActive(product)
-    setOpen(true)
-  }
+  }, [category, products, query, sort])
 
   return (
     <div className="grid gap-8">
@@ -231,15 +178,19 @@ export default function ShopClient() {
               </SheetHeader>
               <div className="mt-6 grid gap-5">
                 <div>
-                  <div className="mb-3 text-sm font-semibold text-[color:var(--foreground)]">Category</div>
+                  <div className="mb-3 text-sm font-semibold text-[color:var(--foreground)]">
+                    Category
+                  </div>
                   <CategoryPills active={category} onChange={setCategory} />
                 </div>
                 <div className="grid gap-2">
-                  <div className="text-sm font-semibold text-[color:var(--foreground)]">Search</div>
+                  <div className="text-sm font-semibold text-[color:var(--foreground)]">
+                    Search
+                  </div>
                   <div className="relative">
                     <Search className="absolute left-3 top-3 h-4 w-4 text-foreground/40" />
                     <Input
-                      placeholder="Search by piece or vibe"
+                      placeholder="Search by piece or style"
                       className="rounded-full border-[color:var(--line-soft)] bg-[color:var(--surface-3)] pl-10"
                       value={temp}
                       onChange={(event) => setTemp(event.target.value)}
@@ -247,7 +198,9 @@ export default function ShopClient() {
                   </div>
                 </div>
                 <div className="grid gap-2">
-                  <div className="text-sm font-semibold text-[color:var(--foreground)]">Sort</div>
+                  <div className="text-sm font-semibold text-[color:var(--foreground)]">
+                    Sort
+                  </div>
                   <Select value={sort} onValueChange={setSort}>
                     <SelectTrigger className="rounded-full border-[color:var(--line-soft)] bg-[color:var(--surface-3)]">
                       <SelectValue placeholder="Featured" />
@@ -275,7 +228,7 @@ export default function ShopClient() {
             <div className="relative flex-1 sm:w-[300px]">
               <Search className="absolute left-3 top-3 h-4 w-4 text-foreground/40" />
               <Input
-                placeholder="Search by piece or vibe"
+                placeholder="Search by piece or style"
                 className="rounded-full border-[color:var(--line-soft)] bg-[color:var(--surface-3)] pl-10"
                 value={temp}
                 onChange={(event) => setTemp(event.target.value)}
@@ -300,7 +253,7 @@ export default function ShopClient() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((product) => (
-          <ProductCard key={product.id} product={product} onQuickView={openQuickView} />
+          <ProductCard key={product.id} product={product} />
         ))}
 
         {filtered.length === 0 && (
@@ -310,64 +263,6 @@ export default function ShopClient() {
         )}
       </div>
 
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-3xl border-[color:var(--line-soft)] bg-[color:var(--surface-1)]">
-          {active && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="font-display text-4xl leading-none text-[color:var(--foreground)]">
-                  {active.title}
-                </DialogTitle>
-                <DialogDescription className="mt-2 max-w-2xl text-sm leading-7 text-foreground/68">
-                  {active.blurb}
-                </DialogDescription>
-              </DialogHeader>
-
-              <div className="grid gap-5 md:grid-cols-[1.15fr_0.85fr]">
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {active.images.map((src, index) => (
-                    <figure key={src} className="paper-panel overflow-hidden rounded-[1.5rem] p-3">
-                      <div className="relative aspect-[4/5] overflow-hidden rounded-[1.15rem]">
-                        <WatermarkedImage
-                          src={src}
-                          alt={`${active.title} view ${index + 1}`}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 40vw"
-                          watermarkMode={index === 0 ? "corner" : "pattern"}
-                          watermarkOpacity={index === 0 ? 0.28 : 0.11}
-                          watermarkPosition="bottom-right"
-                          imageClassName="object-cover"
-                        />
-                      </div>
-                    </figure>
-                  ))}
-                </div>
-
-                <div className="paper-panel flex h-full flex-col justify-between rounded-[1.6rem] p-5">
-                  <div>
-                    <div className="text-3xl font-semibold text-[color:var(--foreground)]">
-                      {formatPrice(active.price)}
-                    </div>
-                    <div className="mt-2 text-sm text-foreground/58">Lead time: {active.leadDays} days</div>
-                    <Separator className="my-5" />
-                    <p className="text-sm leading-7 text-foreground/68">
-                      Every piece is handmade in the studio. Colors can be customized, sizing can be
-                      discussed, and special requests are welcome when you start a custom order.
-                    </p>
-                  </div>
-
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    <Button disabled>Add to cart</Button>
-                    <Button variant="outline" asChild>
-                      <Link href="/custom">Request custom</Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
     </div>
   )
 }

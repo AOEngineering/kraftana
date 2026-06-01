@@ -16,6 +16,7 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar"
 import { Home, ShoppingBag, Palette, Images, Info, Mail } from "lucide-react"
+import { siteConfig } from "@/lib/site"
 
 const nav = [
   { href: "/", label: "Home", icon: Home },
@@ -33,7 +34,7 @@ export default function AppSidebar() {
     <Sidebar className="bg-white border-r border-black/10">
       <SidebarHeader className="px-3 py-4">
         <Link href="/" className="font-extrabold tracking-wide text-base">
-          Kraftana
+          {siteConfig.wordmark}
         </Link>
       </SidebarHeader>
 

@@ -1,158 +1,48 @@
-// components/custom-order/colors.ts
+import {
+  HOBBII_YARN_CATALOG as CatalogYarns,
+  YARN_BRANDS as CatalogBrands,
+  YARN_LINES as CatalogLines,
+  YARN_BY_ID as CatalogById,
+  YARN_FAMILIES as CatalogFamilies,
+  YARN_WEIGHTS as CatalogWeights,
+  YARN_TAGS as CatalogTags,
+  YARN_BY_FAMILY as CatalogByFamily,
+  YARN_BY_LINE as CatalogByLine,
+} from "@/lib/yarnCatalog"
 
-// -----------------------------
-// HOBBII — HONEY BUNNY (all)
-// -----------------------------
-export const HOBBII_HONEY_BUNNY = [
-  { id: "HOBBII-HONEYBUNNY-01-WHITE",        brand: "Hobbii", line: "Honey Bunny", code: "01",  name: "White" },
-  { id: "HOBBII-HONEYBUNNY-03-OATMILK",      brand: "Hobbii", line: "Honey Bunny", code: "03",  name: "Oatmilk" },
-  { id: "HOBBII-HONEYBUNNY-05-BEIGE",        brand: "Hobbii", line: "Honey Bunny", code: "05",  name: "Beige" },
-  { id: "HOBBII-HONEYBUNNY-09-NOUGAT",       brand: "Hobbii", line: "Honey Bunny", code: "09",  name: "Nougat" },
-  { id: "HOBBII-HONEYBUNNY-12-CHOCOLATE",    brand: "Hobbii", line: "Honey Bunny", code: "12",  name: "Chocolate" },
-  { id: "HOBBII-HONEYBUNNY-14-CARAMEL",      brand: "Hobbii", line: "Honey Bunny", code: "14",  name: "Caramel" },
-  { id: "HOBBII-HONEYBUNNY-22-LEMON-CURD",   brand: "Hobbii", line: "Honey Bunny", code: "22",  name: "Lemon Curd" },
-  { id: "HOBBII-HONEYBUNNY-27-GOLD-DUST",    brand: "Hobbii", line: "Honey Bunny", code: "27",  name: "Gold Dust" },
-  { id: "HOBBII-HONEYBUNNY-31-PUMPKIN",      brand: "Hobbii", line: "Honey Bunny", code: "31",  name: "Pumpkin" },
-  { id: "HOBBII-HONEYBUNNY-33-PEACH",        brand: "Hobbii", line: "Honey Bunny", code: "33",  name: "Peach" },
-  { id: "HOBBII-HONEYBUNNY-40-TOMATO",       brand: "Hobbii", line: "Honey Bunny", code: "40",  name: "Tomato" },
-  { id: "HOBBII-HONEYBUNNY-43-BORDEAUX",     brand: "Hobbii", line: "Honey Bunny", code: "43",  name: "Bordeaux" },
-  { id: "HOBBII-HONEYBUNNY-45-CANDYFLOSS",   brand: "Hobbii", line: "Honey Bunny", code: "45",  name: "Candyfloss" },
-  { id: "HOBBII-HONEYBUNNY-47-PINK",         brand: "Hobbii", line: "Honey Bunny", code: "47",  name: "Pink" },
-  { id: "HOBBII-HONEYBUNNY-50-HINT-OF-PINK", brand: "Hobbii", line: "Honey Bunny", code: "50",  name: "Hint of Pink" },
-  { id: "HOBBII-HONEYBUNNY-55-MULBERRY",     brand: "Hobbii", line: "Honey Bunny", code: "55",  name: "Mulberry" },
-  { id: "HOBBII-HONEYBUNNY-62-PLUM",         brand: "Hobbii", line: "Honey Bunny", code: "62",  name: "Plum" },
-  { id: "HOBBII-HONEYBUNNY-63-LILAC",        brand: "Hobbii", line: "Honey Bunny", code: "63",  name: "Lilac" },
-  { id: "HOBBII-HONEYBUNNY-75-BABY-BLUE",    brand: "Hobbii", line: "Honey Bunny", code: "75",  name: "Baby Blue" },
-  { id: "HOBBII-HONEYBUNNY-78-COOL-BLUE",    brand: "Hobbii", line: "Honey Bunny", code: "78",  name: "Cool Blue" },
-  { id: "HOBBII-HONEYBUNNY-79-OPEN-SEA",     brand: "Hobbii", line: "Honey Bunny", code: "79",  name: "Open Sea" },
-  { id: "HOBBII-HONEYBUNNY-82-PRUSSIAN-BLUE",brand: "Hobbii", line: "Honey Bunny", code: "82",  name: "Prussian Blue" },
-  { id: "HOBBII-HONEYBUNNY-87-MIDNIGHT-BLUE",brand: "Hobbii", line: "Honey Bunny", code: "87",  name: "Midnight Blue" },
-  { id: "HOBBII-HONEYBUNNY-90-CAPRI-BLUE",   brand: "Hobbii", line: "Honey Bunny", code: "90",  name: "Capri Blue" },
-  { id: "HOBBII-HONEYBUNNY-91-AQUA",         brand: "Hobbii", line: "Honey Bunny", code: "91",  name: "Aqua" },
-  { id: "HOBBII-HONEYBUNNY-93-LAPIS-BLUE",   brand: "Hobbii", line: "Honey Bunny", code: "93",  name: "Lapis Blue" },
-  { id: "HOBBII-HONEYBUNNY-94-TURQUOISE",    brand: "Hobbii", line: "Honey Bunny", code: "94",  name: "Turquoise" },
-  { id: "HOBBII-HONEYBUNNY-97-DARK-TEAL",    brand: "Hobbii", line: "Honey Bunny", code: "97",  name: "Dark Teal" },
-  { id: "HOBBII-HONEYBUNNY-98-EUCALYPTUS",   brand: "Hobbii", line: "Honey Bunny", code: "98",  name: "Eucalyptus" },
-  { id: "HOBBII-HONEYBUNNY-104-SHAMROCK",    brand: "Hobbii", line: "Honey Bunny", code: "104", name: "Shamrock" },
-  { id: "HOBBII-HONEYBUNNY-111-JUNGLE-GREEN",brand: "Hobbii", line: "Honey Bunny", code: "111", name: "Jungle Green" },
-  { id: "HOBBII-HONEYBUNNY-116-HUNTER-GREEN",brand: "Hobbii", line: "Honey Bunny", code: "116", name: "Hunter Green" },
-  { id: "HOBBII-HONEYBUNNY-122-ANTHRACITE",  brand: "Hobbii", line: "Honey Bunny", code: "122", name: "Anthracite" },
-  { id: "HOBBII-HONEYBUNNY-124-BLACK",       brand: "Hobbii", line: "Honey Bunny", code: "124", name: "Black" },
-]
+const FallbackYarns = Array.isArray(CatalogYarns) ? CatalogYarns : []
+const FallbackBrands = Array.isArray(CatalogBrands) ? CatalogBrands : []
+const FallbackLines = Array.isArray(CatalogLines) ? CatalogLines : []
+const FallbackById = CatalogById && typeof CatalogById === "object" ? CatalogById : {}
+const FallbackFamilies = Array.isArray(CatalogFamilies) ? CatalogFamilies : []
+const FallbackWeights = Array.isArray(CatalogWeights) ? CatalogWeights : []
+const FallbackTags = Array.isArray(CatalogTags) ? CatalogTags : []
+const FallbackByFamily =
+  CatalogByFamily && typeof CatalogByFamily === "object" ? CatalogByFamily : {}
+const FallbackByLine = CatalogByLine && typeof CatalogByLine === "object" ? CatalogByLine : {}
 
-// ------------------------------------
-// HOBBII — RAINBOW COTTON 8/4 (all)
-// (Note: code 081 is not in the chart)
-// ------------------------------------
-export const HOBBII_RAINBOW_84 = [
-  { id: "HOBBII-RAINBOW84-001-WHITE",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "001", name: "White" },
-  { id: "HOBBII-RAINBOW84-002-NATURAL-WHITE",      brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "002", name: "Natural White" },
-  { id: "HOBBII-RAINBOW84-003-NUDE",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "003", name: "Nude" },
-  { id: "HOBBII-RAINBOW84-004-BEIGE",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "004", name: "Beige" },
-  { id: "HOBBII-RAINBOW84-005-GREY-BROWN",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "005", name: "Grey Brown" },
-  { id: "HOBBII-RAINBOW84-006-LIGHT-BROWN",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "006", name: "Light Brown" },
-  { id: "HOBBII-RAINBOW84-007-BROWN",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "007", name: "Brown" },
-  { id: "HOBBII-RAINBOW84-008-DARK-BROWN",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "008", name: "Dark Brown" },
-  { id: "HOBBII-RAINBOW84-009-BLACK",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "009", name: "Black" },
-  { id: "HOBBII-RAINBOW84-010-ANTHRACITE-GREY",    brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "010", name: "Anthracite Grey" },
-  { id: "HOBBII-RAINBOW84-011-DARK-GREY",          brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "011", name: "Dark Grey" },
-  { id: "HOBBII-RAINBOW84-012-VOLCANO-GRAY",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "012", name: "Volcano Gray" },
-  { id: "HOBBII-RAINBOW84-013-GREYISH-PURPLE",     brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "013", name: "Greyish Purple" },
-  { id: "HOBBII-RAINBOW84-014-SILVER-GRAY",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "014", name: "Silver Gray" },
-  { id: "HOBBII-RAINBOW84-015-GREY",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "015", name: "Grey" },
-  { id: "HOBBII-RAINBOW84-016-LIGHT-GREY",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "016", name: "Light Grey" },
-  { id: "HOBBII-RAINBOW84-017-LIGHT-LIME",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "017", name: "Light Lime" },
-  { id: "HOBBII-RAINBOW84-018-LIME",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "018", name: "Lime" },
-  { id: "HOBBII-RAINBOW84-019-LIGHT-GREEN",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "019", name: "Light Green" },
-  { id: "HOBBII-RAINBOW84-020-PETROL-GREEN",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "020", name: "Petrol Green" },
-  { id: "HOBBII-RAINBOW84-021-ARMY-GREEN",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "021", name: "Army Green" },
-  { id: "HOBBII-RAINBOW84-022-DARK-GREEN",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "022", name: "Dark Green" },
-  { id: "HOBBII-RAINBOW84-023-DUSTY-GREEN",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "023", name: "Dusty Green" },
-  { id: "HOBBII-RAINBOW84-024-MINT",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "024", name: "Mint" },
-  { id: "HOBBII-RAINBOW84-025-PASTEL-MINT",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "025", name: "Pastel Mint" },
-  { id: "HOBBII-RAINBOW84-026-DELICATE-LIGHT-BLUE",brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "026", name: "Delicate Light Blue" },
-  { id: "HOBBII-RAINBOW84-027-LIGHT-BLUE",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "027", name: "Light Blue" },
-  { id: "HOBBII-RAINBOW84-028-LIGHT-JEANS-BLUE",   brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "028", name: "Light Jeans Blue" },
-  { id: "HOBBII-RAINBOW84-029-JEANS-BLUE",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "029", name: "Jeans Blue" },
-  { id: "HOBBII-RAINBOW84-030-NAVY-BLUE",          brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "030", name: "Navy Blue" },
-  { id: "HOBBII-RAINBOW84-031-RAINBOW-COTTON",     brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "031", name: "Rainbow Cotton" },
-  { id: "HOBBII-RAINBOW84-032-BABY-BLUE",          brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "032", name: "Baby Blue" },
-  { id: "HOBBII-RAINBOW84-033-TURQUOISE",          brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "033", name: "Turquoise" },
-  { id: "HOBBII-RAINBOW84-034-LIGHT-TURQUOISE",    brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "034", name: "Light Turquoise" },
-  { id: "HOBBII-RAINBOW84-035-PETROL-BLUE",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "035", name: "Petrol Blue" },
-  { id: "HOBBII-RAINBOW84-036-AUBERGINE",          brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "036", name: "Aubergine" },
-  { id: "HOBBII-RAINBOW84-037-DARK-PURPLE",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "037", name: "Dark Purple" },
-  { id: "HOBBII-RAINBOW84-038-LAVENDER",           brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "038", name: "Lavender" },
-  { id: "HOBBII-RAINBOW84-039-PURPLE",             brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "039", name: "Purple" },
-  { id: "HOBBII-RAINBOW84-040-LIGHT-PURPLE",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "040", name: "Light Purple" },
-  { id: "HOBBII-RAINBOW84-041-PASTEL-PURPLE",      brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "041", name: "Pastel Purple" },
-  { id: "HOBBII-RAINBOW84-042-PASTEL-PINK",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "042", name: "Pastel Pink" },
-  { id: "HOBBII-RAINBOW84-043-BABY-PINK",          brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "043", name: "Baby Pink" },
-  { id: "HOBBII-RAINBOW84-044-ROSE",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "044", name: "Rose" },
-  { id: "HOBBII-RAINBOW84-045-PINK",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "045", name: "Pink" },
-  { id: "HOBBII-RAINBOW84-046-OLD-ROSE",           brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "046", name: "Old Rose" },
-  { id: "HOBBII-RAINBOW84-047-DARK-OLD-ROSE",      brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "047", name: "Dark Old Rose" },
-  { id: "HOBBII-RAINBOW84-048-LIGHT-PEACH",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "048", name: "Light Peach" },
-  { id: "HOBBII-RAINBOW84-049-PEACH",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "049", name: "Peach" },
-  { id: "HOBBII-RAINBOW84-050-LIGHT-CORAL",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "050", name: "Light Coral" },
-  { id: "HOBBII-RAINBOW84-051-CORAL",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "051", name: "Coral" },
-  { id: "HOBBII-RAINBOW84-052-VANILLA",            brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "052", name: "Vanilla" },
-  { id: "HOBBII-RAINBOW84-053-PASTEL-YELLOW",      brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "053", name: "Pastel Yellow" },
-  { id: "HOBBII-RAINBOW84-054-YELLOW",             brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "054", name: "Yellow" },
-  { id: "HOBBII-RAINBOW84-055-SUNNY-YELLOW",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "055", name: "Sunny Yellow" },
-  { id: "HOBBII-RAINBOW84-056-CURRY",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "056", name: "Curry" },
-  { id: "HOBBII-RAINBOW84-057-ORANGE",             brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "057", name: "Orange" },
-  { id: "HOBBII-RAINBOW84-058-RED",                brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "058", name: "Red" },
-  { id: "HOBBII-RAINBOW84-059-DARK-RED",           brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "059", name: "Dark Red" },
-  { id: "HOBBII-RAINBOW84-060-BORDEAUX",           brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "060", name: "Bordeaux" },
-  { id: "HOBBII-RAINBOW84-061-ANTIQUE-ROSE",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "061", name: "Antique Rose" },
-  { id: "HOBBII-RAINBOW84-062-LIGHT-PINK",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "062", name: "Light Pink" },
-  { id: "HOBBII-RAINBOW84-063-POWDER-ROSE",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "063", name: "Powder Rose" },
-  { id: "HOBBII-RAINBOW84-064-DARK-POWDER-ROSE",   brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "064", name: "Dark Powder Rose" },
-  { id: "HOBBII-RAINBOW84-065-APRICOT",            brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "065", name: "Apricot" },
-  { id: "HOBBII-RAINBOW84-066-BURNT-ORANGE",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "066", name: "Burnt Orange" },
-  { id: "HOBBII-RAINBOW84-067-BABY-PURPLE",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "067", name: "Baby Purple" },
-  { id: "HOBBII-RAINBOW84-068-DUSTY-PURPLE",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "068", name: "Dusty Purple" },
-  { id: "HOBBII-RAINBOW84-069-LILAC",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "069", name: "Lilac" },
-  { id: "HOBBII-RAINBOW84-070-BLUE-SKY",           brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "070", name: "Blue Sky" },
-  { id: "HOBBII-RAINBOW84-071-LIGHT-BLUE-SKY",     brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "071", name: "Light Blue Sky" },
-  { id: "HOBBII-RAINBOW84-072-OLIVE",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "072", name: "Olive" },
-  { id: "HOBBII-RAINBOW84-073-PEARL-GRAY",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "073", name: "Pearl Gray" },
-  { id: "HOBBII-RAINBOW84-074-DUSTY-LIME",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "074", name: "Dusty Lime" },
-  { id: "HOBBII-RAINBOW84-075-DUSTY-LIGHT-GREEN",  brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "075", name: "Dusty Light Green" },
-  { id: "HOBBII-RAINBOW84-076-ROYAL-BLUE",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "076", name: "Royal Blue" },
-  { id: "HOBBII-RAINBOW84-077-LIGHT-PETROL-BLUE",  brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "077", name: "Light Petrol Blue" },
-  { id: "HOBBII-RAINBOW84-078-STEEL-BLUE",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "078", name: "Steel Blue" },
-  { id: "HOBBII-RAINBOW84-079-DUSTY-BLUE-GREEN",   brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "079", name: "Dusty Blue Green" },
-  { id: "HOBBII-RAINBOW84-080-PLUM",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "080", name: "Plum" },
-  // 081 not present in chart
-  { id: "HOBBII-RAINBOW84-082-OCHRE-YELLOW",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "082", name: "Ochre Yellow" },
-  { id: "HOBBII-RAINBOW84-083-CERISE",             brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "083", name: "Cerise" },
-  { id: "HOBBII-RAINBOW84-084-GREEN",              brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "084", name: "Green" },
-  { id: "HOBBII-RAINBOW84-085-DARK-MINT",          brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "085", name: "Dark Mint" },
-  { id: "HOBBII-RAINBOW84-086-CHRISTMAS-RED",      brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "086", name: "Christmas Red" },
-  { id: "HOBBII-RAINBOW84-087-PETUNIA-PINK",       brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "087", name: "Petunia Pink" },
-  { id: "HOBBII-RAINBOW84-088-TOFFEE",             brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "088", name: "Toffee" },
-  { id: "HOBBII-RAINBOW84-089-ALMOND",             brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "089", name: "Almond" },
-  { id: "HOBBII-RAINBOW84-090-EGG-YOLK",           brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "090", name: "Egg Yolk" },
-  { id: "HOBBII-RAINBOW84-091-DARK-TEAL",          brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "091", name: "Dark Teal" },
-  { id: "HOBBII-RAINBOW84-092-PRUSSIAN-BLUE",      brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "092", name: "Prussian Blue" },
-  { id: "HOBBII-RAINBOW84-093-CANDYFLOSS",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "093", name: "Candyfloss" },
-  { id: "HOBBII-RAINBOW84-094-WISTERIA",           brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "094", name: "Wisteria" },
-  { id: "HOBBII-RAINBOW84-095-INDIGO",             brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "095", name: "Indigo" },
-  { id: "HOBBII-RAINBOW84-096-COBALT-BLUE",        brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "096", name: "Cobalt Blue" },
-  { id: "HOBBII-RAINBOW84-097-MIST",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "097", name: "Mist" },
-  { id: "HOBBII-RAINBOW84-098-SAGE-GREEN",         brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "098", name: "Sage Green" },
-  { id: "HOBBII-RAINBOW84-099-MALACHITE-GREEN",    brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "099", name: "Malachite Green" },
-  { id: "HOBBII-RAINBOW84-100-DEEP-JUNGLE-GREEN",  brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "100", name: "Deep Jungle Green" },
-  { id: "HOBBII-RAINBOW84-101-RUST",               brand: "Hobbii", line: "Rainbow Cotton 8/4", code: "101", name: "Rust" },
-]
+export const HOBBII_YARN_CATALOG = FallbackYarns
+export const YARN_BRANDS = FallbackBrands
+export const YARN_LINES = FallbackLines
+export const YARN_BY_ID = FallbackById
+export const YARN_FAMILIES = FallbackFamilies
+export const YARN_WEIGHTS = FallbackWeights
+export const YARN_TAGS = FallbackTags
+export const YARN_BY_FAMILY = FallbackByFamily
+export const YARN_BY_LINE = FallbackByLine
 
-export const YARN_COLORS = [
-  ...HOBBII_HONEY_BUNNY,
-  ...HOBBII_RAINBOW_84,
-]
+export const YARN_COLORS = HOBBII_YARN_CATALOG
 
-export const YARN_BRANDS = Array.from(new Set(YARN_COLORS.map(c => c.brand)))
-export const YARN_LINES  = Array.from(new Set(YARN_COLORS.map(c => c.line)))
-export const YARN_BY_ID  = Object.fromEntries(YARN_COLORS.map(c => [c.id, c]))
+export const HOBBII_HONEY_BUNNY = YARN_COLORS.filter((item) => item.line === "Honey Bunny")
+
+export const HOBBII_RAINBOW_84 = YARN_COLORS.filter((item) => item.line === "Rainbow Cotton 8/4")
+
+export function distRGB(a, b) {
+  const ar = a?.r ?? 0
+  const ag = a?.g ?? 0
+  const ab = a?.b ?? 0
+  const br = b?.r ?? 0
+  const bg = b?.g ?? 0
+  const bb = b?.b ?? 0
+  return Math.sqrt((ar - br) ** 2 + (ag - bg) ** 2 + (ab - bb) ** 2)
+}

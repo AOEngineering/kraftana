@@ -1,19 +1,19 @@
-// app/robots.txt/route.js
+import { siteConfig } from "@/lib/site"
 
 export async function GET() {
+  const sitemapUrl = `${siteConfig.baseUrl.replace(/\/$/, "")}/sitemap.xml`
   const body = `
 User-agent: *
 Disallow: /api/
 Disallow: /admin/
-Disallow: /.*
 Allow: /
 
-Sitemap: https://aoengineering.io/sitemap.xml
+Sitemap: ${sitemapUrl}
 `.trim()
 
   return new Response(body, {
     headers: {
-      'Content-Type': 'text/plain',
+      "Content-Type": "text/plain",
     },
   })
 }

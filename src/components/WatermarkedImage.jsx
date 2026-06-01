@@ -60,6 +60,7 @@ export default function WatermarkedImage({
   watermarkOpacity = 0.34,
   watermarkPosition = "bottom-right",
   watermarkMode = "corner",
+  showWatermark = true,
   preventDrag = true,
   preventContextMenu = true,
   disableDrag,
@@ -108,16 +109,20 @@ export default function WatermarkedImage({
       <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(20,12,10,0.02),rgba(20,12,10,0.05))]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-t from-[rgba(42,24,21,0.24)] via-transparent to-transparent" />
 
-      {watermarkMode === "pattern" ? (
-        <PatternWatermark text={watermarkText} opacity={watermarkOpacity} className={overlayClassName} />
-      ) : (
-        <CornerWatermark
-          text={watermarkText}
-          opacity={watermarkOpacity}
-          position={watermarkPosition}
-          className={overlayClassName}
-        />
-      )}
+      {showWatermark
+        ? watermarkMode === "pattern"
+          ? (
+            <PatternWatermark text={watermarkText} opacity={watermarkOpacity} className={overlayClassName} />
+          )
+          : (
+            <CornerWatermark
+              text={watermarkText}
+              opacity={watermarkOpacity}
+              position={watermarkPosition}
+              className={overlayClassName}
+            />
+          )
+        : null}
     </div>
   )
 }

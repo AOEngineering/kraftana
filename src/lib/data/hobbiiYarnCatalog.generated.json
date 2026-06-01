@@ -1,0 +1,624 @@
+[
+    {
+        "id":  "HOBBII-HONEYBUNNY-01-WHITE",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "01",
+        "name":  "White",
+        "hex":  "#F8F8F6",
+        "color_family":  "neutral",
+        "undertone":  "cool",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/01-white.webp",
+        "tags":  [
+                     "soft",
+                     "neutral",
+                     "plush",
+                     "clean"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-03-OATMILK",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "03",
+        "name":  "Oatmilk",
+        "hex":  "#E8DCCF",
+        "color_family":  "neutral",
+        "undertone":  "warm",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/03-oatmilk.webp",
+        "tags":  [
+                     "soft",
+                     "neutral",
+                     "warm",
+                     "cozy"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-05-BEIGE",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "05",
+        "name":  "Beige",
+        "hex":  "#D7C1A7",
+        "color_family":  "brown",
+        "undertone":  "warm",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/05-beige.webp",
+        "tags":  [
+                     "earthy",
+                     "warm",
+                     "neutral"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-09-NOUGAT",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "09",
+        "name":  "Nougat",
+        "hex":  "#A07A5A",
+        "color_family":  "brown",
+        "undertone":  "warm",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/09-nougat.webp",
+        "tags":  [
+                     "rich",
+                     "earthy",
+                     "cozy"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-12-CHOCOLATE",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "12",
+        "name":  "Chocolate",
+        "hex":  "#4A3427",
+        "color_family":  "brown",
+        "undertone":  "warm",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/12-chocolate.webp",
+        "tags":  [
+                     "dark",
+                     "rich",
+                     "earthy"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-22-LEMON-CURD",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "22",
+        "name":  "Lemon Curd",
+        "hex":  "#F5DE67",
+        "color_family":  "yellow",
+        "undertone":  "warm",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/22-lemon-curd.webp",
+        "tags":  [
+                     "bright",
+                     "happy",
+                     "sunny"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-31-PUMPKIN",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "31",
+        "name":  "Pumpkin",
+        "hex":  "#D46F32",
+        "color_family":  "orange",
+        "undertone":  "warm",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/31-pumpkin.webp",
+        "tags":  [
+                     "fall",
+                     "warm",
+                     "autumn"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-45-CANDYFLOSS",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "45",
+        "name":  "Candyfloss",
+        "hex":  "#F4A8C4",
+        "color_family":  "pink",
+        "undertone":  "warm",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/45-candyfloss.webp",
+        "tags":  [
+                     "cute",
+                     "pastel",
+                     "soft"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-63-LILAC",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "63",
+        "name":  "Lilac",
+        "hex":  "#C5B1E3",
+        "color_family":  "purple",
+        "undertone":  "cool",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/63-lilac.webp",
+        "tags":  [
+                     "pastel",
+                     "dreamy",
+                     "soft"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-75-BABY-BLUE",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "75",
+        "name":  "Baby Blue",
+        "hex":  "#A7D5F2",
+        "color_family":  "blue",
+        "undertone":  "cool",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/75-baby-blue.webp",
+        "tags":  [
+                     "baby",
+                     "soft",
+                     "sky"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-91-AQUA",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "91",
+        "name":  "Aqua",
+        "hex":  "#5FCFC9",
+        "color_family":  "blue",
+        "undertone":  "cool",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/91-aqua.webp",
+        "tags":  [
+                     "ocean",
+                     "fresh",
+                     "bright"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-98-EUCALYPTUS",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "98",
+        "name":  "Eucalyptus",
+        "hex":  "#789C87",
+        "color_family":  "green",
+        "undertone":  "cool",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/98-eucalyptus.webp",
+        "tags":  [
+                     "sage",
+                     "earthy",
+                     "modern"
+                 ]
+    },
+    {
+        "id":  "HOBBII-HONEYBUNNY-124-BLACK",
+        "brand":  "Hobbii",
+        "line":  "Honey Bunny",
+        "code":  "124",
+        "name":  "Black",
+        "hex":  "#1B1B1B",
+        "color_family":  "neutral",
+        "undertone":  "cool",
+        "fiber":  "100% Polyester",
+        "weight":  "Super Bulky",
+        "texture":  "Velvet Plush",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/honey-bunny/124-black.webp",
+        "tags":  [
+                     "bold",
+                     "modern",
+                     "classic"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-001-WHITE",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "001",
+        "name":  "White",
+        "hex":  "#FAFAF7",
+        "color_family":  "neutral",
+        "undertone":  "cool",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/001-white.webp",
+        "tags":  [
+                     "clean",
+                     "minimal",
+                     "neutral"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-009-BLACK",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "009",
+        "name":  "Black",
+        "hex":  "#1D1D1D",
+        "color_family":  "neutral",
+        "undertone":  "cool",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/009-black.webp",
+        "tags":  [
+                     "bold",
+                     "modern",
+                     "contrast"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-017-LIGHT-LIME",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "017",
+        "name":  "Light Lime",
+        "hex":  "#D7E66F",
+        "color_family":  "green",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/017-light-lime.webp",
+        "tags":  [
+                     "fresh",
+                     "bright",
+                     "fun"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-024-MINT",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "024",
+        "name":  "Mint",
+        "hex":  "#A8E3D1",
+        "color_family":  "green",
+        "undertone":  "cool",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/024-mint.webp",
+        "tags":  [
+                     "soft",
+                     "fresh",
+                     "pastel"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-029-JEANS-BLUE",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "029",
+        "name":  "Jeans Blue",
+        "hex":  "#507CB6",
+        "color_family":  "blue",
+        "undertone":  "cool",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/029-jeans-blue.webp",
+        "tags":  [
+                     "classic",
+                     "denim",
+                     "modern"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-038-LAVENDER",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "038",
+        "name":  "Lavender",
+        "hex":  "#BCA7DF",
+        "color_family":  "purple",
+        "undertone":  "cool",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/038-lavender.webp",
+        "tags":  [
+                     "dreamy",
+                     "soft",
+                     "pastel"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-043-BABY-PINK",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "043",
+        "name":  "Baby Pink",
+        "hex":  "#F6C6D8",
+        "color_family":  "pink",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/043-baby-pink.webp",
+        "tags":  [
+                     "cute",
+                     "soft",
+                     "baby"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-049-PEACH",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "049",
+        "name":  "Peach",
+        "hex":  "#F6B18E",
+        "color_family":  "orange",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/049-peach.webp",
+        "tags":  [
+                     "warm",
+                     "soft",
+                     "sunset"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-054-YELLOW",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "054",
+        "name":  "Yellow",
+        "hex":  "#F5D83D",
+        "color_family":  "yellow",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/054-yellow.webp",
+        "tags":  [
+                     "sunny",
+                     "bright",
+                     "happy"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-058-RED",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "058",
+        "name":  "Red",
+        "hex":  "#D64646",
+        "color_family":  "red",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/058-red.webp",
+        "tags":  [
+                     "bold",
+                     "classic",
+                     "holiday"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-063-POWDER-ROSE",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "063",
+        "name":  "Powder Rose",
+        "hex":  "#D7A0A6",
+        "color_family":  "pink",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/063-powder-rose.webp",
+        "tags":  [
+                     "muted",
+                     "elegant",
+                     "soft"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-069-LILAC",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "069",
+        "name":  "Lilac",
+        "hex":  "#BFA8E0",
+        "color_family":  "purple",
+        "undertone":  "cool",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/069-lilac.webp",
+        "tags":  [
+                     "pastel",
+                     "dreamy",
+                     "soft"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-072-OLIVE",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "072",
+        "name":  "Olive",
+        "hex":  "#7A7B43",
+        "color_family":  "green",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/072-olive.webp",
+        "tags":  [
+                     "earthy",
+                     "military",
+                     "nature"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-078-STEEL-BLUE",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "078",
+        "name":  "Steel Blue",
+        "hex":  "#587C9B",
+        "color_family":  "blue",
+        "undertone":  "cool",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/078-steel-blue.webp",
+        "tags":  [
+                     "muted",
+                     "modern",
+                     "calm"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-082-OCHRE-YELLOW",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "082",
+        "name":  "Ochre Yellow",
+        "hex":  "#D6A73C",
+        "color_family":  "yellow",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/082-ochre-yellow.webp",
+        "tags":  [
+                     "retro",
+                     "mustard",
+                     "earthy"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-091-DARK-TEAL",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "091",
+        "name":  "Dark Teal",
+        "hex":  "#2C6975",
+        "color_family":  "blue",
+        "undertone":  "cool",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/091-dark-teal.webp",
+        "tags":  [
+                     "deep",
+                     "ocean",
+                     "modern"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-098-SAGE-GREEN",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "098",
+        "name":  "Sage Green",
+        "hex":  "#93A88A",
+        "color_family":  "green",
+        "undertone":  "neutral",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/098-sage-green.webp",
+        "tags":  [
+                     "sage",
+                     "modern",
+                     "minimal"
+                 ]
+    },
+    {
+        "id":  "HOBBII-RAINBOW84-101-RUST",
+        "brand":  "Hobbii",
+        "line":  "Rainbow Cotton 8/4",
+        "code":  "101",
+        "name":  "Rust",
+        "hex":  "#A24E34",
+        "color_family":  "orange",
+        "undertone":  "warm",
+        "fiber":  "100% Cotton",
+        "weight":  "Fingering",
+        "texture":  "Soft Cotton",
+        "washable":  true,
+        "image":  "/images/yarn/hobbii/rainbow-cotton-8-4/101-rust.webp",
+        "tags":  [
+                     "autumn",
+                     "earthy",
+                     "rich"
+                 ]
+    }
+]

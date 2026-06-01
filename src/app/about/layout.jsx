@@ -1,8 +1,11 @@
-export const metadata = {
-  title: "About Kevonne | Kraftana",
+import { buildMetadata } from "@/lib/metadata"
+
+export const metadata = buildMetadata({
+  title: "About Kevonne",
   description:
-    "Kraftana is a creative studio by Kevonne Workman. Handmade pieces that celebrate curves, comfort, and creativity.",
-}
+    "Meet Kevonne Workman, the maker behind Kraftana Studio in Cleveland, creating handmade crochet, custom orders, and size-inclusive pieces.",
+  path: "/about",
+})
 
 export default function AboutLayout({ children }) {
   return children

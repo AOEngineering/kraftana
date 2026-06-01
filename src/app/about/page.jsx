@@ -1,5 +1,3 @@
-"use client"
-
 import Link from "next/link"
 import { BookOpen, Heart, Sparkles, Users } from "lucide-react"
 
@@ -7,10 +5,10 @@ import WatermarkedImage from "@/components/WatermarkedImage"
 import { Button } from "@/components/ui/button"
 
 const facts = [
-  { icon: Users, label: "Size inclusive by design" },
+  { icon: Users, label: "Size-inclusive by design" },
   { icon: Sparkles, label: "Handmade pieces, one by one" },
-  { icon: BookOpen, label: "Always learning, always creating" },
-  { icon: Heart, label: "Care, comfort, and longevity" },
+  { icon: BookOpen, label: "Built from personal style and real need" },
+  { icon: Heart, label: "Care, comfort, and confidence" },
 ]
 
 export default function AboutPage() {
@@ -23,8 +21,8 @@ export default function AboutPage() {
             About Kevonne Workman
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-foreground/70 sm:text-[1.06rem]">
-            The hands and heart behind Kraftana, building handmade crochet with warmth,
-            self-expression, and a more personal point of view.
+            The hands and heart behind Kraftana Studio, creating handmade crochet with warmth,
+            self-expression, and a real love for pieces that feel personal.
           </p>
         </div>
       </section>
@@ -34,42 +32,43 @@ export default function AboutPage() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[1.45rem]">
             <WatermarkedImage
               src="/images/autumn-granny-square-cardigan.jpeg"
-              alt="Autumn granny square cardigan styled in the Kraftana studio"
+              alt="Autumn granny square cardigan styled in the Kraftana Studio"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
               priority
-              watermarkMode="corner"
-              watermarkOpacity={0.24}
-              watermarkPosition="bottom-right"
+              showWatermark={false}
               imageClassName="object-cover"
             />
           </div>
-          <div className="px-3 pb-2 pt-4 text-sm text-foreground/58">Kraftana studio, Cleveland, Ohio</div>
+          <div className="px-3 pb-2 pt-4 text-sm text-foreground/58">Kraftana Studio, Cleveland, Ohio</div>
         </article>
 
         <article className="paper-panel rounded-[2rem] p-6 sm:p-8">
           <div className="space-y-5 text-[0.98rem] leading-8 text-foreground/72">
             <p>
-              Hi, I am Kevonne Workman. I started Kraftana because I was tired of not finding cute,
-              stylish pieces made for women of my size. I picked up my crochet hook, trusted my
-              creativity, and decided to make them myself.
+              Hi, I&apos;m Kevonne Workman. Kraftana Studio started with a simple frustration: I wanted cute,
+              stylish handmade pieces that actually felt like they were made with women like me in
+              mind.
             </p>
 
             <p>
-              What began as a personal need grew into a brand rooted in self expression,
-              inclusivity, and handcrafted joy. Each piece is meant to feel intentional, wearable,
-              and genuinely made with care.
+              Instead of waiting to find them, I picked up my crochet hook and started making them
+              myself. What began as a personal need grew into a small studio rooted in creativity,
+              comfort, and the belief that handmade work can still feel polished, modern, and full
+              of personality.
             </p>
 
             <p>
-              When I am not crocheting, I am reading a good book, spending time with family, or
-              learning new crafts to keep the creativity flowing. Texture, color, and the quiet
-              magic of making something from scratch still shape everything I do.
+              Custom work matters to me because people do not all want the same fit, the same
+              palette, or the same feeling from what they wear. Crochet gives me room to build
+              around real bodies, real preferences, and the small details that make something feel
+              truly yours.
             </p>
 
             <p>
-              Thank you for being here. I hope you find something at Kraftana that feels warm,
-              personal, and beautifully yours.
+              When I&apos;m not crocheting, I&apos;m usually reading, spending time with family, or learning
+              another craft that sends me right back into color and texture again. Thank you for
+              being here and spending time with the studio.
             </p>
           </div>
 
